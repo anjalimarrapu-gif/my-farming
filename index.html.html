@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://readdy.link/share/b3084117d9b2b1bdca2888068bc2db78 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" crossorigin="anonymous" async="" src="./Smart Farming Dashboard_files/array.js.download"></script><script src="./Smart Farming Dashboard_files/e.js.download"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming Dashboard</title>
+    <script src="./Smart Farming Dashboard_files/3.4.16"></script>
+    <link href="./Smart Farming Dashboard_files/remixicon.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Smart Farming Dashboard_files/css2" rel="stylesheet">
+    <script src="./Smart Farming Dashboard_files/echarts.min.js.download"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        secondary: '#6366F1'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.flex{display:flex}.grid{display:grid}.h-10{height:2.5rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-48{height:12rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:0.5rem}.w-8{width:2rem}.max-w-7xl{max-width:80rem}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.whitespace-nowrap{white-space:nowrap}.\!rounded-button{border-radius:8px !important}.rounded{border-radius:8px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:16px}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-primary{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.bg-yellow-600{--tw-bg-opacity:1;background-color:rgb(202 138 4 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.font-\[\'Pacifico\'\]{font-family:'Pacifico'}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-yellow-600{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.text-yellow-700{--tw-text-opacity:1;color:rgb(161 98 7 / var(--tw-text-opacity, 1))}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.hover\:bg-primary:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style><link type="image/png" rel="icon" href="https://public.readdy.ai/gen_page/readdy-logo.png"><link rel="stylesheet" href="./Smart Farming Dashboard_files/css2(1)"></head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <div class="text-2xl font-[&#39;Pacifico&#39;] text-primary">logo</div>
+                    <span class="text-lg font-semibold">Smart Farm</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 !rounded-button">
+                        <i class="ri-notification-3-line text-xl"></i>
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 !rounded-button">
+                        <i class="ri-settings-3-line text-xl"></i>
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full">
+                            <i class="ri-user-line"></i>
+                        </div>
+                        <span class="text-sm font-medium">Robert Wilson</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="flex space-x-8 py-4">
+                <a href="https://readdy.link/share/b3084117d9b2b1bdca2888068bc2db78#" class="text-primary border-b-2 border-primary px-1 py-2 text-sm font-medium">Dashboard</a>
+                <a href="https://readdy.link/share/b3084117d9b2b1bdca2888068bc2db78#" class="text-gray-500 hover:text-gray-700 px-1 py-2 text-sm font-medium">Devices</a>
+                <a href="https://readdy.link/share/b3084117d9b2b1bdca2888068bc2db78#" class="text-gray-500 hover:text-gray-700 px-1 py-2 text-sm font-medium">Analytics</a>
+                <a href="https://readdy.link/share/b3084117d9b2b1bdca2888068bc2db78#" class="text-gray-500 hover:text-gray-700 px-1 py-2 text-sm font-medium">Reports</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium">Temperature</h3>
+                    <span class="px-2 py-1 text-sm text-green-700 bg-green-100 rounded-full">Normal</span>
+                </div>
+                <div id="tempChart" class="h-48" _echarts_instance_="ec_1756806911540" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 352px; height: 192px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="440" height="240" style="position: absolute; left: 0px; top: 0px; width: 352px; height: 192px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium">Humidity</h3>
+                    <span class="px-2 py-1 text-sm text-green-700 bg-green-100 rounded-full">Normal</span>
+                </div>
+                <div id="humidityChart" class="h-48" _echarts_instance_="ec_1756806911541" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 352px; height: 192px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="440" height="240" style="position: absolute; left: 0px; top: 0px; width: 352px; height: 192px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-lg font-medium">Soil Moisture</h3>
+                    <span class="px-2 py-1 text-sm text-yellow-700 bg-yellow-100 rounded-full">Warning</span>
+                </div>
+                <div id="soilChart" class="h-48" _echarts_instance_="ec_1756806911542" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 352px; height: 192px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="440" height="240" style="position: absolute; left: 0px; top: 0px; width: 352px; height: 192px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold">Device Status</h2>
+                <div class="flex items-center gap-4">
+                    <button class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-primary border border-primary hover:bg-primary hover:text-white !rounded-button whitespace-nowrap">
+                        <i class="ri-add-line"></i>
+                        Add Device
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 !rounded-button">
+                        <i class="ri-refresh-line"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-lg">
+                                <i class="ri-plant-line text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Greenhouse Sensor #1</h4>
+                                <p class="text-sm text-gray-500">Zone A</p>
+                            </div>
+                        </div>
+                        <span class="flex items-center gap-1 text-sm text-green-600">
+                            <span class="w-2 h-2 bg-green-600 rounded-full"></span>
+                            Active
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Temperature</div>
+                            <div class="text-lg font-medium">24.5°C</div>
+                        </div>
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Humidity</div>
+                            <div class="text-lg font-medium">65%</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="text-sm text-primary font-medium">View Details</button>
+                        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-200 rounded-full">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-lg">
+                                <i class="ri-plant-line text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Greenhouse Sensor #2</h4>
+                                <p class="text-sm text-gray-500">Zone B</p>
+                            </div>
+                        </div>
+                        <span class="flex items-center gap-1 text-sm text-yellow-600">
+                            <span class="w-2 h-2 bg-yellow-600 rounded-full"></span>
+                            Warning
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Temperature</div>
+                            <div class="text-lg font-medium">28.9°C</div>
+                        </div>
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Humidity</div>
+                            <div class="text-lg font-medium">45%</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="text-sm text-primary font-medium">View Details</button>
+                        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-200 rounded-full">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-lg">
+                                <i class="ri-plant-line text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Greenhouse Sensor #3</h4>
+                                <p class="text-sm text-gray-500">Zone C</p>
+                            </div>
+                        </div>
+                        <span class="flex items-center gap-1 text-sm text-gray-600">
+                            <span class="w-2 h-2 bg-gray-600 rounded-full"></span>
+                            Inactive
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Temperature</div>
+                            <div class="text-lg font-medium">--°C</div>
+                        </div>
+                        <div class="bg-white p-3 rounded">
+                            <div class="text-sm text-gray-500">Humidity</div>
+                            <div class="text-lg font-medium">--%</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="text-sm text-primary font-medium">View Details</button>
+                        <button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-200 rounded-full">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" crossorigin="anonymous" src="./Smart Farming Dashboard_files/surveys.js.download"></script><script type="text/javascript" crossorigin="anonymous" src="./Smart Farming Dashboard_files/dead-clicks-autocapture.js.download"></script><script type="text/javascript" crossorigin="anonymous" src="./Smart Farming Dashboard_files/config.js.download"></script><script id="chartInit">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tempChart = echarts.init(document.getElementById('tempChart'));
+            const humidityChart = echarts.init(document.getElementById('humidityChart'));
+            const soilChart = echarts.init(document.getElementById('soilChart'));
+
+            const baseOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    borderColor: '#eee',
+                    textStyle: {color: '#1f2937'}
+                },
+                grid: {
+                    top: 10,
+                    right: 10,
+                    bottom: 20,
+                    left: 40,
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
+                    axisLine: {lineStyle: {color: '#eee'}},
+                    axisTick: {show: false},
+                    axisLabel: {color: '#666'}
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLine: {show: false},
+                    axisTick: {show: false},
+                    splitLine: {lineStyle: {color: '#eee'}},
+                    axisLabel: {color: '#666'}
+                }
+            };
+
+            tempChart.setOption({
+                ...baseOption,
+                series: [{
+                    data: [22, 23, 24, 25, 24, 23, 22],
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: {width: 3},
+                    itemStyle: {color: 'rgba(87, 181, 231, 1)'},
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(87, 181, 231, 0.1)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(87, 181, 231, 0)'
+                        }])
+                    }
+                }]
+            });
+
+            humidityChart.setOption({
+                ...baseOption,
+                series: [{
+                    data: [65, 62, 60, 58, 60, 63, 65],
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: {width: 3},
+                    itemStyle: {color: 'rgba(141, 211, 199, 1)'},
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(141, 211, 199, 0.1)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(141, 211, 199, 0)'
+                        }])
+                    }
+                }]
+            });
+
+            soilChart.setOption({
+                ...baseOption,
+                series: [{
+                    data: [45, 42, 38, 35, 32, 30, 28],
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: false,
+                    lineStyle: {width: 3},
+                    itemStyle: {color: 'rgba(251, 191, 114, 1)'},
+                    areaStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(251, 191, 114, 0.1)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(251, 191, 114, 0)'
+                        }])
+                    }
+                }]
+            });
+
+            window.addEventListener('resize', function() {
+                tempChart.resize();
+                humidityChart.resize();
+                soilChart.resize();
+            });
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '1W5B6hZQcnXQFbGFZlX1gQ';
+    window.host = 'readdy.ai';
+</script>
+<script src="./Smart Farming Dashboard_files/share.js.download"></script>
+<div id="watermark" class="group" style="position: fixed; bottom: 48px; right: 46px; width: 184px; height: 39px; background-color: rgb(240, 240, 240); border-style: solid; border-width: 3px; border-radius: 12px; border-image-slice: 3; border-image-width: 3px; border-image-outset: 0; border-color: rgb(229, 231, 235); display: flex; align-items: center; justify-content: center; cursor: pointer;"><div class="designed-by" style="color: rgb(93, 93, 93); font-family: &quot;Secular One&quot;; font-size: 12px; line-height: 20px; font-weight: 400; padding-left: 12px;">Designed by</div><img src="./Smart Farming Dashboard_files/watermark.png" style="width: 86px; margin-left: 0px;"></div></body></html>
